@@ -10,8 +10,6 @@ OfficeHours::Application.routes.draw do
 
   resources :users , only: [:show, :edit, :update]
 
-  root to: 'welcome#index'
-
   get 'about' => 'contents#about'
 
   root 'contents#landing'

@@ -32,11 +32,19 @@
 }
 
 .navbar-collapse {
-	width: 85%;
+	width: 90%;
 }
 
 .navbar-nav > li > a {
 	padding-top: 20px;
+	color: #333333;
+	font-family: 'Helvetica Light', 'Helvetica', Arial, sans-serif;
+	font-size: 15px;
+}
+
+.navbar-nav .navbar-right {
+	color: #333333;
+	font: 'Helvetica Light', 'Helvetica', Arial, sans-serif;;	
 }
 
 .background {
