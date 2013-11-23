@@ -1,31 +1,33 @@
 class ExamsController < ApplicationController
   before_action :set_exam, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index, :show]
 
-  # GET /exams
-  # GET /exams.json
   def index
     @exams = Exam.all
   end
 
-  # GET /exams/1
-  # GET /exams/1.json
   def show
   end
 
-  # GET /exams/new
   def new
     @exam = Exam.new
+    1.times do
+      question = @exam.questions.build
+      5.times { question.answers.build }
+    end
+
+    unless current_user.try(:admin?)
+      flash[:alert] = "You are not authorized to view this page."
+      redirect_to root_path
+    end
   end
 
-  # GET /exams/1/edit
   def edit
   end
 
-  # POST /exams
-  # POST /exams.json
   def create
     @exam = Exam.new(exam_params)
-
+    authorize @exam
     respond_to do |format|
       if @exam.save
         format.html { redirect_to @exam, notice: 'Exam was successfully created.' }
@@ -37,9 +39,8 @@ class ExamsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /exams/1
-  # PATCH/PUT /exams/1.json
   def update
+    authorize @exam
     respond_to do |format|
       if @exam.update(exam_params)
         format.html { redirect_to @exam, notice: 'Exam was successfully updated.' }
@@ -51,8 +52,6 @@ class ExamsController < ApplicationController
     end
   end
 
-  # DELETE /exams/1
-  # DELETE /exams/1.json
   def destroy
     @exam.destroy
     respond_to do |format|
@@ -69,6 +68,10 @@ class ExamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exam_params
-      params.require(:exam).permit(:name, :description)
+      params.require(:exam).permit(:name, questions_attributes: [
+                                          :id, :exam_id, :content, '_destroy',
+                                          answers_attributes: [
+                                          :id, :question_id, :content, :correct,
+                                          '_destroy'] ])
     end
 end
