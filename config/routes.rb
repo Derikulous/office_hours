@@ -1,12 +1,16 @@
 OfficeHours::Application.routes.draw do
-  devise_for :users
-  resources :solutions
-
-  resources :questions
-
   resources :exams
 
-  resources :answers
+  resources :questions, only: [:show, :edit, :update] do
+    resources :solutions
+  end
+
+  devise_for :users,
+             controllers: {omniauth_callbacks: "omniauth_callbacks"}
+
+  resources :users , only: [:show, :edit, :update]
+
+  root to: 'welcome#index'
 
   get 'about' => 'contents#about'
 
