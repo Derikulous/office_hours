@@ -11,3 +11,5 @@
     <%= link_to "<i class='icon-#{provider}' id='#{provider}'></i> Login with #{provider.to_s.titleize}".html_safe,  omniauth_authorize_path(resource_name, provider), class: "service btn-#{provider}" %>
   <% end -%>
 <% end -%>
+
+

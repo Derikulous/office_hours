@@ -9,6 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require formtastic
+ *= require font-awesome
  *= require_tree .
  */
 
@@ -44,7 +46,7 @@
 
 .navbar-nav .navbar-right {
 	color: #333333;
-	font: 'Helvetica Light', 'Helvetica', Arial, sans-serif;;	
+	font: 'Helvetica Light', 'Helvetica', Arial, sans-serif;;
 }
 
 .background {
@@ -87,7 +89,7 @@ p {
 }
 
 
-#box-1 {	
+#box-1 {
   padding: 10px 10px 20px 30px;
   top: 0;
 }

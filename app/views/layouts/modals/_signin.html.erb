@@ -1,8 +1,8 @@
-<div class="well-middle">
+<div class="well-center">
 
   <h3 style="text-align:center"><b>Office</b>Hours</h3>
 
-  <% form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div><%= f.email_field :email, class: "form-control", :autofocus => true, :placeholder => "email" %></div>
 
   <div><%= f.password_field :password, class: "form-control", :placeholder => "password" %></div>
@@ -27,3 +27,6 @@
 <%= render "devise/shared/links" %>
 
 </div>
+
+
+
