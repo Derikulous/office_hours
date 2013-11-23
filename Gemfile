@@ -18,6 +18,7 @@ gem 'figaro'
 gem 'pry-rails'
 gem 'font-awesome-rails'
 gem 'formtastic'
+gem 'pundit'
 
 group :developemnt, :test do
   gem 'simplecov', require: false
