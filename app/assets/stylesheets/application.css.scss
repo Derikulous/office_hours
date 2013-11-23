@@ -50,3 +50,68 @@
 .background {
   position: relative;
 }
+
+
+
+
+
+h2 {
+	font: 'Helvetica Light', 'Helvetica', Arial, sans-serif;
+  font-weight: 100;
+  font-size: 39.5px;
+}
+
+h3 {
+	font: 'Helvetica Light', 'Helvetica', Arial, sans-serif;
+	font-weight: 100;
+	font-size: 24.5px;
+}
+
+h4 {
+	font: 'Helvetica Light', 'Helvetica', Arial, sans-serif;
+  font-weight: 100;
+  font-size: 22px;
+}
+
+p {
+	font-family: 'helvetica', arial, sans-serif;
+	font-size: 16px;
+}
+
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-top: 15%;
+}
+
+
+#box-1 {	
+  padding: 10px 10px 20px 30px;
+  top: 0;
+}
+
+#box-2 {
+  padding: 25px 10px 20px 30px;
+  h4 {
+    margin-bottom: 20px;
+  }
+}
+
+.black-trans {
+  background: rgba(0,0,0,.9);
+  color: white;
+ }
+
+.white-trans {
+  background: rgba(255,255,255,.95);
+  color: black;
+}
+
+
+
+.text_padding {
+	padding: 8% 20px 0 20px;
+}
+
