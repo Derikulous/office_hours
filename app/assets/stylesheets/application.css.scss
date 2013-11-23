@@ -88,17 +88,20 @@ p {
   margin-top: 15%;
 }
 
-
-#box-1 {
-  padding: 10px 10px 20px 30px;
-  top: 0;
+.bob {
+	background: red;
+	text-align: center;
+	height: 100px;
+	
 }
 
-#box-2 {
-  padding: 25px 10px 20px 30px;
-  h4 {
-    margin-bottom: 20px;
-  }
+.box-1 {	
+  padding: 10px 10px 20px 30px;
+
+}
+
+.center {
+	text-align: center;
 }
 
 .black-trans {
