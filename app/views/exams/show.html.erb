@@ -1,14 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="well-test col-md-6">
+<h2><%= @exam.name %></h2>
+<ol>
+  <% for question in @exam.questions %>
+  <li><%= h question.content %></li>
+  <ul>
+    <% for answer in question.answers %>
+    <li><%= h answer.content %></li>
+    <% end %>
+  </ul>
+  <% end %>
+</ol>
 
-<p>
-  <strong>Name:</strong>
-  <%= @exam.name %>
-</p>
+<% if current_user.try(:admin?) %>
+  <%= link_to 'Edit', edit_exam_path(@exam), class: "btn btn-info" %>
+<% end %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @exam.description %>
-</p>
-
-<%= link_to 'Edit', edit_exam_path(@exam) %> |
-<%= link_to 'Back', exams_path %>
+<%= link_to 'Back', exams_path, class: "btn btn-primary" %>
+</div>
+</div>

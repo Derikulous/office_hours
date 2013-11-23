@@ -17,25 +17,24 @@
             <th>Question</th>
             <th>Test Name</th>
             <% if current_user.present? %>
-              <th>Score</th>
+            <th>Score</th>
             <% end %>
           </tr>
         </thead>
         <% @user.solutions.each do |solution| %>
-          <thead>
-            <tr>
-              <th><%= solution.question.exam.name %></th>
-              <th><%= solution.question.content %></th>
-              <th>
-                <% if solution.correct %>
-                Correct<br/ >
-                  <% else %>
-                Incorrect<br/ >
-              </th>
-                <% end %>
-            </tr>
-          </thead>
-        <% end %>
+        <thead>
+          <tr>
+            <th><%= solution.question.exam.name %></th>
+            <th><%= solution.question.content %></th>
+            <th><% if solution.correct %>
+              Correct<br/ >
+              <% else %>
+              Incorrect<br/ >
+            </th>
+            <% end %>
+            <% end %>
+          </tr>
+        </thead>
       </table>
     </div>
   </div>

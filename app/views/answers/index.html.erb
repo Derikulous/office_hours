@@ -5,10 +5,6 @@
     <tr>
       <th>Question</th>
       <th>Content</th>
-      <th>Correct</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -17,9 +13,8 @@
       <tr>
         <td><%= answer.question_id %></td>
         <td><%= answer.content %></td>
-        <td><%= answer.correct %></td>
-        <% if policy(answer).update? %>
         <td><%= link_to 'Show', answer %></td>
+        <% if policy(answer).update? %>
         <td><%= link_to 'Edit', edit_answer_path(answer), class: "btn btn-primary" %></td>
         <% end %>
         <% if policy(answer).destroy? %>

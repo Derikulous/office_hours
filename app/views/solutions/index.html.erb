@@ -4,7 +4,6 @@
   <thead>
     <tr>
       <th>Question</th>
-      <th>User</th>
       <th>Correct</th>
       <th></th>
       <th></th>
@@ -16,11 +15,7 @@
     <% @solutions.each do |solution| %>
       <tr>
         <td><%= solution.question_id %></td>
-        <td><%= solution.user_id %></td>
         <td><%= solution.correct %></td>
-        <td><%= link_to 'Show', solution %></td>
-        <td><%= link_to 'Edit', edit_solution_path(solution) %></td>
-        <td><%= link_to 'Destroy', solution, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +23,3 @@
 
 <br>
 
-<%= link_to 'New Solution', new_solution_path %>

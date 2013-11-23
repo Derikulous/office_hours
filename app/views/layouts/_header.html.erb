@@ -10,12 +10,12 @@
     </div>
     <div class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav">
-        <li>
-          <%= link_to 'Practice', exams_path %>
-        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user.present? %>
+          <li>
+          <%= link_to 'Practice', exams_path %>
+          </li>
         <li class="<%= 'active' if current_page?('#')%> dropdown">
           <%= link_to (current_user.name.to_s + '<b class="caret"></b>').html_safe, @user, :id => 'setupdrop', :class => "dropdown-toggle nav-link", :data => {:toggle => "dropdown"} %>
           <ul class="dropdown-menu" role="menu">
