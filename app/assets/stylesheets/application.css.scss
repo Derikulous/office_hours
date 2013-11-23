@@ -15,7 +15,6 @@
 @import "bootstrap";
 @import "bootstrap/theme";
 
-
 .navbar {
 	background: rgba(255,255,255,.35);
 	-webkit-border-radius: 0;
@@ -37,17 +36,5 @@
 }
 
 .navbar-nav > li > a {
-	padding-top: 23px;
-	font: 'Helvetica Light', 'Helvetica', Arial, sans-serif;;
-	font-size: 16px;
-}
-
-.form-control {
-	width: 97%;
-  margin-bottom: 20px;
-//  //  top and bottom are 40px, left and right are 0px;
-//}
-
-//.landing-text-field {
-//	margin-top: 50px;	
+	padding-top: 20px;
 }
