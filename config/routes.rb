@@ -1,4 +1,5 @@
 OfficeHours::Application.routes.draw do
+  devise_for :users
   resources :solutions
 
   resources :questions
@@ -6,6 +7,7 @@ OfficeHours::Application.routes.draw do
   resources :exams
 
   resources :answers
+  root :to => "home#index"
 
   root 'contents#landing'
 
@@ -51,7 +53,7 @@ OfficeHours::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
