@@ -7,11 +7,10 @@ OfficeHours::Application.routes.draw do
   resources :exams
 
   resources :answers
-  root :to => "home#index"
-
-  root 'contents#landing'
 
   get 'about' => 'contents#about'
+
+  root 'contents#landing'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
