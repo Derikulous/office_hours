@@ -347,6 +347,26 @@ background-color: #EFC94C;
 border-bottom: 2px solid #E2E2E2;
 }
 
+.learner-bubble {
+    float: right;
+    position: relative;
+}
+.header {
+    float: left;
+}
+.bubble-txt {
+    color: white;
+    font-family: 'Signika', sans-serif;
+    position: absolute;
+    top: 25px;
+    font-size: 19px;
+    width: 120px;
+    left: 30px;
+}
+.learner-bubble img {
+    width: 130px;
+}
+
 .left-section {
 background: #F1F1F1;
 padding: 30px;
