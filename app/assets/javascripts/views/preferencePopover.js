@@ -5,7 +5,8 @@ var preferencePopover = Backbone.View.extend({
 	},
 	
 	events: {
-		"click .learning-style":  "prepareMainPage"
+		"click .learning-style":  "prepareMainPage",
+		"click a": "triggerRoute"
 	},
 	
 	render: function() {
@@ -26,6 +27,13 @@ var preferencePopover = Backbone.View.extend({
 	
 	hideModal: function() {
 		this.$("#myModal").modal("hide");
+	},
+	
+	triggerRoute: function(ev) {
+		ev.preventDefault();
+		var index = this.$("a").index($(ev.currentTarget));
+		console.log(index);
+		App.router.navigate('style/' + index, { trigger: true })
 	}
 	
 

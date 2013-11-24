@@ -1,5 +1,5 @@
 
-window.App = {
+window.App = window.App || {
     Models: {},
     Collections: {},
     Views: {},
@@ -8,8 +8,8 @@ window.App = {
 
 App.Router = Backbone.Router.extend({
     routes: {
-    	'' : 'index',
-        'style/:id': 'updateMainSection'
+        'style/:id': 'updateMainSection',
+        'tutor': 'tutorPage'
     },
 
     updateMainSection: function(id){
@@ -35,32 +35,50 @@ App.Router = Backbone.Router.extend({
     	}
 
     },
+    
+    tutorPage: function() {
+    	App.tutorView = new tutorView({ el : "#right-section"});
+    	App.tutorView.render();
+    },
 
     index: function() {
-
+		console.log("index!");
     }
 
 });
 
 var init = function() {
 	//var router = Router();
-	var router = new App.Router();
-	Backbone.history.start();
+	if(!App.router) {
+		App.router = new App.Router();
+	}
+	if( !Backbone.History.started ) {
+		Backbone.history.start();
+	}
 	reloadPref();
-
+	
+	$(".drag-txt").on("dragstart", startDraggingTxt);
+	if (!App.nodePadView) {
+		App.notePadView = new notePadView({el : "#notePad"});
+		App.notePadView.render();
+	}
 };
 
 var reloadPref = function() {
-	App.modalView = new preferencePopover({ el : "#modal-placeholder" });
-	App.modalView.render();
-	$(".drag-txt").on("dragstart", startDraggingTxt);
-	App.notePadView = new notePadView({el : "#notePad"});
-	
-	App.notePadView.render();
-
-
+	if (!App.modalView) {
+		App.modalView = new preferencePopover({ el : "#modal-placeholder" });
+		App.modalView.render();
+	}
 }
 $(function() {
-	init();
+  	init();
+  	
+  	$(".switch-style").click(function(ev) {
+  		ev.preventDefault();
+  		App.modalView = new preferencePopover({ el : "#modal-placeholder" });
+		App.modalView.render();
+  	});
+
 });
-$(document).on('page:load', reloadPref);
+
+
