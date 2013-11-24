@@ -21,14 +21,19 @@ App.Router = Backbone.Router.extend({
     	case "0":
     		App.visualView = new visualContentView({ el: "#right-section" });
     		App.visualView.render();
+    		$(".bubble-txt").text("Hi, visual learner!");
 			break;
     	case "1":
     	    App.audioView = new audioContentView({ el: "#right-section" });
     		App.audioView.render();
+    		$(".bubble-txt").text("Hi, audio learner!");
+
     		break;
     	case "2":
     		App.virtualLabView = new virtualLabView( { el : "#right-section" });
     		App.virtualLabView.render();
+    		$(".bubble-txt").text("Hi, tactile learner!");
+
     		break;
     	default:
     		break;
