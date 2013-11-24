@@ -23,6 +23,4 @@ var audioContentView = Backbone.View.extend({
 		this.$(".tip-text").tooltip();
 
 	}
-
-	
 });

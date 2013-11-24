@@ -45,11 +45,18 @@ var init = function() {
 	var router = new App.Router();
 	Backbone.history.start();
 	reloadPref();
+
 };
 
 var reloadPref = function() {
 	App.modalView = new preferencePopover({ el : "#modal-placeholder" });
-	App.modalView.render()
+	App.modalView.render();
+	$(".drag-txt").on("dragstart", startDraggingTxt);
+	App.notePadView = new notePadView({el : "#notePad"});
+	
+	App.notePadView.render();
+
+
 }
 $(function() {
 	init();
