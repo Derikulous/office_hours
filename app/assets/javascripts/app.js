@@ -19,6 +19,8 @@ App.Router = Backbone.Router.extend({
     	//TODO
     	switch(id) {
     	case "0":
+    		App.visualView = new visualContentView({ el: "#right-section" });
+    		App.visualView.render();
 			break;
     	case "1":
     	    App.audioView = new audioContentView({ el: "#right-section" });

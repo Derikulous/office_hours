@@ -62,22 +62,24 @@
       <div class="col-md-8" role="main">
         <!-- Main section -->
         <div id="right-section" class="bs-docs-section">
-          <div class="page-header">
-            <h1 id="main section">Chapter 3 : Visual</h1>
-            <p class="lead">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          <div class="visual-section section">
+            <h1 id="main section">What is a solution</h1>
+            <p class="lead">Real life: Making Kool-Aid</p>
+            <img src="assets/kool_aid.png"></img>
+            <p class="drag-txt" draggable="true">If you have ever made Kool-Aid, you might remember adding the contents of a Kool-Aid packet and some sugar to a pitcher of water. After stirring, you're left with a bright red, cherry flavored drink: Kool-Aid. Even though it may not seem like it, you've just conducted a chemistry experiment. The Kool-Aid you have made is a solution.</p>
+          	<p class="drag-txt" draggable="true">A solution is a mixture of two or more substances. We refer to those substances as solute(s) and solvent(s).</p>
+            <img src="assets/solute_solvent_solution.png" width="100%"></img>
+          	<p class="drag-txt" draggable="true">The solute is what is being dissolved. The solvent is the substance that does the dissolving. In our Kool-Aid example, we have two solutes, Kool-Aid powder and sugar, and one solvent, water.
 
-              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-            </div>
+If we know exactly how much solute we add to a solvent, we can calculate the concentration of a solution. The concentration, or Molarity (M), is defined as the moles of solute/liters of solution.
+			</p>
+			
+			<p class="drag-txt" draggable="true">Let's work through a practice problem:</p>
+			<img src="assets/solution_problem.png" width="100%"></img>
+			<p class="drag-txt" draggable="true">Okay, now it's time to practice; let's see what you've learned.</p>
           </div>
-
+        </div>
+     </div>
     <!-- Footer
     ================================================== -->
     <footer class="bs-footer" role="contentinfo">
@@ -111,14 +113,34 @@
     </div><!-- /.modal -->
     </script>
 
+	<!-- Visual Contents -->
+	<script id="visual-content-tmpl" type="text/x-handlebars-template">
+	<div class="visual-section section">
+		<h1 id="main section">What is a solution</h1>
+		<p class="lead">Real life: Making Kool-Aid</p>
+		<img src="assets/kool_aid.png"></img>
+		<p class="drag-txt" draggable="true">If you have ever made Kool-Aid, you might remember adding the contents of a Kool-Aid packet and some sugar to a pitcher of water. After stirring, you're left with a bright red, cherry flavored drink: Kool-Aid. Even though it may not seem like it, you've just conducted a chemistry experiment. The Kool-Aid you have made is a solution.</p>
+		<p class="drag-txt" draggable="true">A solution is a mixture of two or more substances. We refer to those substances as solute(s) and solvent(s).</p>
+		<img src="assets/solute_solvent_solution.png" width="100%"></img>
+		<p class="drag-txt" draggable="true">The solute is what is being dissolved. The solvent is the substance that does the dissolving. In our Kool-Aid example, we have two solutes, Kool-Aid powder and sugar, and one solvent, water.
+	
+	If we know exactly how much solute we add to a solvent, we can calculate the concentration of a solution. The concentration, or Molarity (M), is defined as the moles of solute/liters of solution.
+		</p>
+		
+		<p class="drag-txt" draggable="true">Let's work through a practice problem:</p>
+		<img src="assets/solution_problem.png" width="100%"></img>
+		<p class="drag-txt" draggable="true">Okay, now it's time to practice; let's see what you've learned.</p>
+	  </div>
+	</div>
+	</script>
+
 
 	<!-- Audio Contents -->
 	<script id="audio-content-tmpl" type="text/x-handlebars-template">
 	<div class="audio-content section" id="audio-section" >
 		{{#each audioContents}}
 		<div class="audio-section" id="style-aud-chapter-{{id}}">
-
-			<h2 class="audio-header">What is a solution?</h2>
+			<h1 id="main section">What is a solution</h1>
 			<p class="drag-txt" draggable="true">A solution is a mixture of two or more substances. Let's take a look at a real life example.</p>
 			<h3> Making a solution: </h3>
 			<div class="video"><iframe src="http://player.vimeo.com/video/{{movieLink}}"  width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
