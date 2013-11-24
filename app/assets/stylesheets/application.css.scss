@@ -25,34 +25,30 @@
 	margin-bottom: 0px;
 }
 
-.navbar-brand {
-  font-color: white;
-	opacity: .95;
+
+
+// Landing pg styles
+
+.landing-background {
+	background-image:url('Slide2.jpg');
+	position: absolute;
+	background-repeat:repeat;
+	width: 100%;
+	height: 100%;
+
+	.btn {
+		padding: 10px 13px 10px 13px;
+		margin-bottom: 10px;
+	}
 }
 
-.navbar-collapse {
-	width: 90%;
-}
-
-.navbar-nav > li > a {
-	padding-top: 20px;
-	color: #333333;
-	font-size: 15px;
-}
-
-.navbar-nav .navbar-right {
-	color: #333333;
-}
-
-.background {
-  position: relative;
-}
-
-.bg-overlay {
+.landing-div {
   position: absolute;
   top: 0;
   width: 100%;
   margin-top: 10%;
+  opacity: 1;
+
 }
 
 .bob {
@@ -60,6 +56,10 @@
 	text-align: center;
 	height: 280px;
 
+}
+
+.no-padding {
+	padding: none;
 }
 
 .picking-bougars {
@@ -72,7 +72,7 @@
 
 }
 
-.kit-kat {
+.header-align {
 	margin-left: 15px;
 }
 
@@ -91,9 +91,26 @@
   color: white;
  }
 
-.white-trans {
-  background: rgba(255,255,255,.95);
-  color: black;
+.text-background {
+  background: #4c4b4b;
+  color: white;
+
+  h2 {
+  	font-size:29px;
+  }
+
+  h4 {
+  	font-size: 18px;
+  	margin-top: 13px;
+  }
+}
+
+.sign-up-text {
+	margin-top: 10px;
+}
+
+.sign-up-button {
+	align: left;
 }
 
 .landing_icons {
