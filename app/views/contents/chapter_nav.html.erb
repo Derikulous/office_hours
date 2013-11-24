@@ -1,3 +1,5 @@
+<%= javascript_include_tag params[:controller] %>
+
 <div id="modal-placeholder"></div>
 
 <!-- Office Hours Header -->
@@ -112,8 +114,8 @@ If we know exactly how much solute we add to a solvent, we can calculate the con
     </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
     </script>
-
-	<!-- Visual Contents -->
+    
+    	<!-- Visual Contents -->
 	<script id="visual-content-tmpl" type="text/x-handlebars-template">
 	<div class="visual-section section">
 		<h1 id="main section">What is a solution</h1>
@@ -187,3 +189,27 @@ If we know exactly how much solute we add to a solvent, we can calculate the con
 		</div>
 	</div>
 	</script>
+	
+	
+	<!-- Ask a tutor -->
+	<script id="tutor-tmpl" type="text/x-handlebars-template">
+        <video id="incoming" width=500 height=500 autoplay> </video>
+        <video id="outgoing" width=100 height=100 autoplay> </video>
+
+        <script>
+            /*
+            var callobj = setupCall(prompt("your name?"), function (){
+                var wantToCall = confirm("do you want to place a call?");
+                if(wantToCall){
+                    callobj.callSomeone(prompt("recipient id?"));
+                }
+            });*/
+            var callobj = setupCall("tyoverby", function (){
+                callobj.callSomeone("ty1");
+            });
+
+
+        </script>
+	</script>
+
+
