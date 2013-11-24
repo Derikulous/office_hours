@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Lato:400,700,900,400italic");
+@import url("//fonts.googleapis.com/css?family=Ubuntu");
 
 /*!
  * Bootstrap v3.0.0
@@ -100,9 +100,6 @@ html {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-body {
-  margin-top: 40px;
-}
 
 a:focus {
   outline: thin dotted;
@@ -364,16 +361,11 @@ html {
 }
 
 body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.428571429;
   color: #000000;
   background: url(/assets/pattern.jpg)
-}
-
-#mountain {
-  background: url(/assets/mountain.jpg) no-repeat center center fixed;
-  background-size: cover;
 }
 
 input,
@@ -4609,7 +4601,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-fixed-top {
   position: fixed;
-  padding: 12px 0px 12px 0px;
+  padding: 0px 0px 12px 0px;
   right: 0;
   left: 0;
   border-width: 0 0 1px;
@@ -4878,7 +4870,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default {
-  background-color: #FFFFFF;
+  background-color: rgb(16,16,16);
   border-color: transparent;
 }
 
@@ -4897,7 +4889,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #818181;
+  color: white;
 }
 
 .navbar-default .navbar-nav > .create-account > a {

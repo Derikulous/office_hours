@@ -29,7 +29,7 @@
 }
 
 .navbar-brand {
-	background-color: white;
+  font-color: white;
 	opacity: .95;
 }
 
@@ -40,46 +40,16 @@
 .navbar-nav > li > a {
 	padding-top: 20px;
 	color: #333333;
-	font-family: 'Helvetica Light', 'Helvetica', Arial, sans-serif;
 	font-size: 15px;
 }
 
 .navbar-nav .navbar-right {
 	color: #333333;
-	font: 'Helvetica Light', 'Helvetica', Arial, sans-serif;;
 }
 
 .background {
   position: relative;
 }
-
-
-
-
-
-h2 {
-	font: 'Helvetica Light', 'Helvetica', Arial, sans-serif;
-  font-weight: 100;
-  font-size: 39.5px;
-}
-
-h3 {
-	font: 'Helvetica Light', 'Helvetica', Arial, sans-serif;
-	font-weight: 100;
-	font-size: 24.5px;
-}
-
-h4 {
-	font: 'Helvetica Light', 'Helvetica', Arial, sans-serif;
-  font-weight: 100;
-  font-size: 22px;
-}
-
-p {
-	font-family: 'helvetica', arial, sans-serif;
-	font-size: 16px;
-}
-
 
 .bg-overlay {
   position: absolute;
@@ -92,10 +62,10 @@ p {
 	background: red;
 	text-align: center;
 	height: 100px;
-	
+
 }
 
-.box-1 {	
+.box-1 {
   padding: 10px 10px 20px 30px;
 
 }
@@ -121,4 +91,3 @@ p {
 .text_padding {
 	padding: 8% 20px 0 20px;
 }
-

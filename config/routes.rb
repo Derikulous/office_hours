@@ -11,7 +11,7 @@ OfficeHours::Application.routes.draw do
   resources :users , only: [:show, :edit, :update]
 
   get 'about' => 'contents#about'
-
+  get 'chapter_nav' => 'contents#chapter_nav'
   root 'contents#landing'
 
   # The priority is based upon order of creation: first created -> highest priority.
