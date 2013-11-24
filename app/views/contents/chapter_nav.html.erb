@@ -8,7 +8,6 @@
   </div>
 </div>
 
-
 <div class="container bs-docs-container">
   <div class="row">
     <!-- Left Section -->
@@ -20,7 +19,8 @@
               <!-- Button trigger modal -->
               <a class="list-group-item active" href="#"> Chapters</a>
               <a class="list-group-item" data-toggle="modal" data-target="#myModal"> Ideal Gases</a>
-              <%= link_to "Boyles Law", "#boyle", "data-toggle" => "modal", :class => "list-group-item" %>
+              <!-- Button trigger modal -->
+              <%= link_to "Boyles Law", "data-target" => "#myModal", "data-toggle" => "modal", :class => "list-group-item" %>
             </div>
             <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -90,18 +90,18 @@
 	<div class="audio-content section" id="audio-section" >
 		{{#each audioContents}}
 		<div class="audio-section" id="style-aud-chapter-{{id}}">
-			
+
 			<h2 class="audio-header">{{sectionTitle}}</h2>
 	<iframe src="http://player.vimeo.com/video/{{movieLink}}"  width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	<div class="caption">{{text}}</div>
-			
+
 		</div>
 		{{/each}}
-	
+
 	</div>
 	</script>
-	
-	
+
+
 	<!-- Tactile Contents -->
 	<script id="tactile-content-tmpl" type="text/x-handlebars-template">
 	<div class="tactile-content" id="tactile-section" >
