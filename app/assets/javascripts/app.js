@@ -31,9 +31,9 @@ App.Router = Backbone.Router.extend({
     	default:
     		break;
     	}
-    	    	
+
     },
-    
+
     index: function() {
 
     }
