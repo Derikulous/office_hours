@@ -27,6 +27,8 @@ App.Router = Backbone.Router.extend({
     		App.audioView.render();
     		break;
     	case "2":
+    		App.virtualLabView = new virtualLabView( { el : "#right-section" });
+    		App.virtualLabView.render();
     		break;
     	default:
     		break;

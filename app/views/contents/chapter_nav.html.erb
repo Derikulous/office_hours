@@ -71,7 +71,7 @@
     <ul class="nav navbar-nav">
     {{#each styles}}
     <li class="thumnail">
-    <a href="#style/{{id}}"><img src="./css/img/pref_popover_{{id}}.png"/><button class="btn">{{name}}</button></a>
+    <a href="#style/{{id}}"><img src="assets/pref_popover_{{id}}.png"/><button class="btn">{{name}}</button></a>
     </li>
     {{/each}}
     </ul>
@@ -85,18 +85,47 @@
     </script>
 
 
-    <!-- Audio Contents -->
-    <script id="audio-content-tmpl" type="text/x-handlebars-template">
-    <div class="audio-content" id="audio-section" >
-    {{#each audioContents}}
-    <div class="audio-section" id="style-aud-chapter-{{id}}">
-
-    <h2 class="audio-header">{{sectionTitle}}</h2>
-    <iframe src="http://player.vimeo.com/video/{{movieLink}}"  width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    <div class="caption">{{text}}</div>
-
-    </div>
-    {{/each}}
-
-    </div>
-    </script>
+	<!-- Audio Contents -->
+	<script id="audio-content-tmpl" type="text/x-handlebars-template">
+	<div class="audio-content section" id="audio-section" >
+		{{#each audioContents}}
+		<div class="audio-section" id="style-aud-chapter-{{id}}">
+			
+			<h2 class="audio-header">{{sectionTitle}}</h2>
+	<iframe src="http://player.vimeo.com/video/{{movieLink}}"  width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<div class="caption">{{text}}</div>
+			
+		</div>
+		{{/each}}
+	
+	</div>
+	</script>
+	
+	
+	<!-- Tactile Contents -->
+	<script id="tactile-content-tmpl" type="text/x-handlebars-template">
+	<div class="tactile-content" id="tactile-section" >
+		<div class="virtual-lab">
+			<div class="col-md-9 alert alert-info">
+				<strong>Hey!</strong> Do you know how to make solution?
+			</div>
+			<button class="col-md-2 retry btn primary-btn">Try Again!</button>
+			<div class="drag-section section">
+				{{#each dragData}}
+					<div class="drag-target" draggable="true" data-name="{{name}}">
+						<img class="lab-icon" src="assets/{{name}}.png" />
+						<p class="caption">{{displayText}}</p>
+					</div>
+				{{/each}}
+			</div>
+			<div class="drop-section section">
+				{{#each dropData}}
+					<div class="drop-target" data-name="{{name}}">
+						<img src="assets/{{name}}.png" />
+						<p class="caption">{{displayText}}</p>
+					</div>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+	</script>
