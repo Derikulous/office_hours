@@ -153,7 +153,7 @@
 	-webkit-box-shadow: 2px 2px 0 0 rgba(0,0,0,0.3);
 	-moz-box-shadow: 2px 2px 0 0 rgba(0,0,0,0.3);
 	box-shadow: 0 2px 0 0 rgba(0,0,0,0.5);
-	background: #9CDACD;
+	background: #D9FCF4;	
 	padding-left: 10%;
 	padding-bottom: 5%;
 	margin-top: 5%;
@@ -161,11 +161,34 @@
 
 .audio-header {
 	font-size: 25px;
-	background-image: url("../images/icon-video.png");
-	background-size: 38;
+	background-image: url("icon-video.png");
+	background-size: 34px;
 	background-repeat: no-repeat;
 	padding-left: 50px;
 	padding-top: 5px;
+}
+
+blockquote p {
+	display: inline;
+	color: rgb(22, 22, 75);
+	font-weight: bold;
+}
+
+#right-section p {
+	font-size: 18px;
+	padding: 10px 0;
+}
+
+.tooltip-inner {
+	width: 130px;
+	height: 70px;
+	font-size: 20px;
+	padding-top: 50px;
+}
+
+.video {
+	margin-top: 55px;
+	margin-bottom: 25px;
 }
 
 /* virtual lab */
@@ -255,3 +278,4 @@ padding: 10px;
 background: white;
 border: 1px solid rgb(196, 196, 196);
 }
+

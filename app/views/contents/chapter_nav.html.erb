@@ -91,10 +91,19 @@
 		{{#each audioContents}}
 		<div class="audio-section" id="style-aud-chapter-{{id}}">
 
-			<h2 class="audio-header">{{sectionTitle}}</h2>
-	<iframe src="http://player.vimeo.com/video/{{movieLink}}"  width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	<div class="caption">{{text}}</div>
+			<h2 class="audio-header">What is a solution?</h2>
+			<p class="drag-txt" draggable="true">A solution is a mixture of two or more substances. Let's take a look at a real life example.</p>
+			<h3> Making a solution: </h3>
+			<div class="video"><iframe src="http://player.vimeo.com/video/{{movieLink}}"  width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
+			<div class="caption drag-txt" draggable="true"><p>To make a solution, we have to add a solute and a solvent together. The solute is what is being dissolved and the solvent is the substance doing the dissolving. 
 
+If we know exactly how much solute we add to a solvent, we can calculate the concentration of a solution. The concentration, or Molarity (M), is defined as the moles of solute/liters of solution.</p></div>
+			<blockquote class="drag-txt" draggable="true"><div>
+				<p type="button" class="tip-text" data-toggle="tooltip" data-placement="top" title="" data-original-title="M">molarity</p><p> = 
+				moles of solute/</p><p class="tip-text" data-toggle="tooltip" data-placement="top" title="" data-original-title="Liter">volume of solution</p>
+			</div>
+			</blockquote>
 		</div>
 		{{/each}}
 

@@ -20,6 +20,8 @@ var audioContentView = Backbone.View.extend({
 		var template = Handlebars.compile(source);
 		
 		this.$el.html(template(contents));
+		this.$(".tip-text").tooltip();
+
 	}
 
 	
