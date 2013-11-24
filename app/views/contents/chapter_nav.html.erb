@@ -14,24 +14,45 @@
     <div class="col-md-3 left-section">
       <div class="bs-sidebar hidden-print affix-top" role="complementary">
         <ul class="nav bs-sidenav">
-          <div class="col-lg-8">
+          <div class="col-md-10">
             <div class="list-group">
               <!-- Button trigger modal -->
-              <a class="list-group-item active" href="#"> Chapters</a>
-              <a class="list-group-item" data-toggle="modal" data-target="#myModal"> Ideal Gases</a>
-              <!-- Button trigger modal -->
-              <%= link_to "Boyles Law", "data-target" => "#myModal", "data-toggle" => "modal", :class => "list-group-item" %>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <%= render "layouts/modals/boyle" %>
+              <a class="list-group-item active " data-toggle="collapse" data-target="#demo"> Chemistry Chapters<b class="caret" style="border-top-color: white; border-bottom-color: white"></b></a>
+              <div id="demo" class="collapse in">
+                <a class="list-group-item"> Atoms, Molecules, Ions</a>
+                <a class="list-group-item"> Stoichiometry</a>
+                <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        Solutions
+                      </a><b class="caret"></b>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                        <ul>
+                          <li class="divider"> Electrolytes</a></li>
+                          <li class="divider"><a href="#"> Concentration</a></li>
+                          <%= render 'layouts/modals/chemsolution' %>
+                          <li class="divider"> Dilutions</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="list-group-item"> Chemical Reactions</a>
+                  <a class="list-group-item"> Ideal Gases</a>
+                  <a class="list-group-item"> Acids and Bases</a>
+                  <a class="list-group-item"> Energy, Enthalpy, and Thermodynamics</a>
+                  <a class="list-group-item"> Electrochemistry</a>
+                  <a class="list-group-item"> Quantum Mechanics</a>
+                  <a class="list-group-item"> Chemical Equilibrium</a>
+                  <a class="list-group-item"> Atomic Theory</a>
+                </div>
               </div>
-            </div><!-- /.modal -->
-          </div>
+            </div>
+          </ul>
         </div>
       </div>
-
       <div class="col-md-9" role="main">
         <!-- Main section -->
         <div id="right-section" class="bs-docs-section">
@@ -96,11 +117,11 @@
 			<h3> Making a solution: </h3>
 			<div class="video"><iframe src="http://player.vimeo.com/video/{{movieLink}}"  width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			</div>
-			<div class="caption drag-txt" draggable="true"><p>To make a solution, we have to add a solute and a solvent together. The solute is what is being dissolved and the solvent is the substance doing the dissolving. 
+			<div class="caption drag-txt" draggable="true"><p>To make a solution, we have to add a solute and a solvent together. The solute is what is being dissolved and the solvent is the substance doing the dissolving.
 
 If we know exactly how much solute we add to a solvent, we can calculate the concentration of a solution. The concentration, or Molarity (M), is defined as the moles of solute/liters of solution.</p></div>
 			<blockquote class="drag-txt" draggable="true"><div>
-				<p type="button" class="tip-text" data-toggle="tooltip" data-placement="top" title="" data-original-title="M">molarity</p><p> = 
+				<p type="button" class="tip-text" data-toggle="tooltip" data-placement="top" title="" data-original-title="M">molarity</p><p> =
 				moles of solute/</p><p class="tip-text" data-toggle="tooltip" data-placement="top" title="" data-original-title="Liter">volume of solution</p>
 			</div>
 			</blockquote>
