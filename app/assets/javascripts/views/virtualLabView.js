@@ -84,7 +84,7 @@ var virtualLabView = Backbone.View.extend({
 		
 		if (droppableData.isCorrect) {
 			if (this.currentDraggableData.isCorrect) {
-				$droppable.find("img").attr("src", "./img/" + droppableData.resultImg + ".png"); 
+				$droppable.find("img").attr("src", "assets/" + droppableData.resultImg + ".png"); 
 				this._displayMsg(droppableData.msg, "alert-success");
 			}
 		} else {
