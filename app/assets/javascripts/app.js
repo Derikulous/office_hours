@@ -52,6 +52,14 @@ App.Router = Backbone.Router.extend({
 
 });
 
+var currentDrag = "";
+var startDraggingTxt = function (ev) {
+	$target = $(ev.currentTarget);
+	$target.addClass("highligh-text");
+	currentDrag = $target.text();
+	ev.originalEvent.dataTransfer.setData("text", $target.text());
+};
+
 var init = function() {
 	//var router = Router();
 	if(!App.router) {
