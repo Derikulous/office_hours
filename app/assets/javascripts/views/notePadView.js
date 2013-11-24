@@ -4,8 +4,9 @@ var notePadView = Backbone.View.extend({
 	},
 	
 	events: {
-		"dragover":  "allowDrop",
-		"drop" : "drop"
+		"dragover #notePad":  "allowDrop",
+		"drop #notePad" : "drop",
+		"click .delete" : "deleteNote"
 	},
 	
 	allowDrop: function(ev) {
@@ -30,8 +31,13 @@ var notePadView = Backbone.View.extend({
 		
 	},
 	
+	deleteNote: function() {
+		this.$("#notePad").html("");
+		localStorage.clear();
+	},
+	
 	render: function() {
-		this.$el.html(localStorage.getItem("notePad"));
+		this.$("#notePad").html(localStorage.getItem("notePad"));
 	}
 });
 

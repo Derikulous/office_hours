@@ -22,6 +22,7 @@ App.Router = Backbone.Router.extend({
     		App.visualView = new visualContentView({ el: "#right-section" });
     		App.visualView.render();
     		$(".bubble-txt").text("Hi, visual learner!");
+    		
 			break;
     	case "1":
     	    App.audioView = new audioContentView({ el: "#right-section" });
@@ -38,6 +39,8 @@ App.Router = Backbone.Router.extend({
     	default:
     		break;
     	}
+    	$(".drag-txt").on("dragstart", startDraggingTxt);
+
 
     },
     
@@ -72,7 +75,7 @@ var init = function() {
 	
 	$(".drag-txt").on("dragstart", startDraggingTxt);
 	if (!App.nodePadView) {
-		App.notePadView = new notePadView({el : "#notePad"});
+		App.notePadView = new notePadView({el : "#notePadSec"});
 		App.notePadView.render();
 	}
 };
@@ -85,7 +88,8 @@ var reloadPref = function() {
 }
 $(function() {
   	init();
-  	
+  	$(".drag-txt").on("dragstart", startDraggingTxt);
+
   	$(".switch-style").click(function(ev) {
   		ev.preventDefault();
   		App.modalView = new preferencePopover({ el : "#modal-placeholder" });
