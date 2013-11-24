@@ -11,8 +11,6 @@ App.Router = Backbone.Router.extend({
     	'' : 'index',
         'style/:id': 'updateMainSection'
     },
-    initialize: function() {
-    },
 
     updateMainSection: function(id){
     	if (App.modalView) {
@@ -37,17 +35,23 @@ App.Router = Backbone.Router.extend({
     },
     
     index: function() {
-    	App.modalView = new preferencePopover({ el : "#modal-placeholder" });
-		App.modalView.render();
+
     }
 
 });
 
-$(function() {
+var init = function() {
 	//var router = Router();
-
 	var router = new App.Router();
 	Backbone.history.start();
+	reloadPref();
+};
 
-
+var reloadPref = function() {
+	App.modalView = new preferencePopover({ el : "#modal-placeholder" });
+	App.modalView.render()
+}
+$(function() {
+	init();
 });
+$(document).on('page:load', reloadPref);
