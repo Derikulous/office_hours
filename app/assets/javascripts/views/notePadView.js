@@ -35,19 +35,4 @@ var notePadView = Backbone.View.extend({
 	}
 });
 
-/*
-		"dragstart .drag-target":  "startDragging",
-		"dragstart .drag-target":  "startDragging",
-		"drop .drop-target": "drop",
-		"dragover .drop-target" : "allowDrop",
-		"click .retry" : "reset"
-
-*/
-var currentDrag = "";
-var startDraggingTxt = function (ev) {
-	$target = $(ev.currentTarget);
-	$target.addClass("highligh-text");
-	currentDrag = $target.text();
-	ev.originalEvent.dataTransfer.setData("text", $target.text());
-};
 
