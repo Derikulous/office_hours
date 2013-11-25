@@ -13,5 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap_ui
+//= require contents
 //= require turbolinks
 //= require exams
