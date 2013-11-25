@@ -95,6 +95,9 @@ $(function() {
   		App.modalView = new preferencePopover({ el : "#modal-placeholder" });
 		App.modalView.render();
   	});
+  	
+  	$(".tip-text").tooltip();
+
 
 });
 

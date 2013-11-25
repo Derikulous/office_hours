@@ -237,7 +237,7 @@ blockquote p {
 
 @-webkit-keyframes blinker {  /* Decimal not necessary, 0 and 1 is enough */
     0% { 
-    box-shadow: 0 0 50px rgb(181, 241, 141),0 0 30px rgb(255, 255, 255);
+    box-shadow: 0 0 80px #7BC91B,0 0 30px rgb(255, 255, 255);
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
@@ -247,7 +247,7 @@ blockquote p {
     box-shadow: none;
     }
     50% { 
-    box-shadow: 0 0 50px rgb(181, 241, 141),0 0 30px rgb(255, 255, 255);
+    box-shadow: 0 0 80px #7BC91B,0 0 30px rgb(255, 255, 255);
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
@@ -257,7 +257,7 @@ blockquote p {
     box-shadow: none;
     }
     100% { 
-    box-shadow: 0 0 50px rgb(181, 241, 141),0 0 30px rgb(255, 255, 255);
+    box-shadow: 0 0 80px #7BC91B,0 0 30px rgb(255, 255, 255);
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
@@ -327,7 +327,7 @@ blockquote p {
 .pref .thumnail .btn {
 	background: white;
 	font-size: 20px;
-	padding-left: 5px;
+	padding: 14px 2px;
 }
 
 #right-section .virtual-lab .question {
