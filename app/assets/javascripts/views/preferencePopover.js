@@ -14,7 +14,7 @@ var preferencePopover = Backbone.View.extend({
 			{ name:  "Visual", id:  "0"},
 			{ name:  "Audio", id: "1"  },
 			{ name:  "Tactile", id: "2" },
-			{ name:  "Not Sure", id: "3" }
+			{ name:  "Help me decide", id: "3" }
 		
 		]};
 		
