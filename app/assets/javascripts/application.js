@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap_ui
 //= require jquery_ujs
+//= require bootstrap_ui
 //= require turbolinks
 //= require exams
