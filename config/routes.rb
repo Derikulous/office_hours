@@ -1,14 +1,6 @@
 OfficeHours::Application.routes.draw do
-  get "courses/index"
-  get "courses/show"
-  get "courses/edit"
-  get "courses/update"
-  get "courses/destroy"
-  get "chapters/index"
-  get "chapters/show"
-  get "chapters/edit"
-  get "chapters/update"
-  get "chapters/destroy"
+  resources :courses
+  resources :chapters
   resources :exams
 
   resources :questions, only: [:show, :edit, :update] do
