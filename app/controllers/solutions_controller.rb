@@ -12,6 +12,7 @@ class SolutionsController < ApplicationController
 
   def new
     @solution = @question.solutions.new
+    @progress = @question.exam.generate_progress(current_user)
   end
 
   def edit
