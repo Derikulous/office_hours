@@ -5,29 +5,26 @@
 
     <% if current_user.present? %>
 
-    <h3 id="progress-animated">
-      <h2>Progress: </h2>
-      <h4>Number of Questions: <%= exam.questions.size %> </h4>
-      <h4>Your Score: <%= exam.generate_score(current_user) %> </h4>
-    </h3>
-    <div class="progress progress-striped active">
-      <div class="progress-bar"></div>
-    </div>
-    <% if exam.next_question(current_user) %>
-    <%= link_to 'Take Exam', new_question_solution_path(exam.questions.sample), class: "btn btn-primary" %>
-    <% else %>
-    <%= link_to 'Retake Exam', new_question_solution_path(exam.questions.sample), class: "btn btn-success" %>
+    <h4>Number of Questions: <%= exam.questions.size %> </h4>
+    <h4>Your Score: <%= exam.generate_score(current_user) %> </h4>
+  </h3>
+
+  <% if exam.next_question(current_user) %>
+  <%= link_to 'Take Exam', new_question_solution_path(exam.questions.first), class: "btn btn-info" %>
+  <% else %>
+  <%= link_to 'Retake Exam', new_question_solution_path(exam.questions.sample), class: "btn btn-success" %>
+  <% end %>
+  <div>
+    <br>
+    <% if policy(exam).update? %>
+    <%= link_to 'Edit', edit_exam_path(exam), class: "btn btn-info" %>
     <% end %>
-    <div><br>
-      <% if policy(exam).update? %>
-      <%= link_to 'Edit', edit_exam_path(exam), class: "btn btn-info" %>
-      <% end %>
-      <% if policy(exam).destroy? %>
-      <%= link_to 'Destroy', exam, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-      <% end %>
-    </div>
+    <% if policy(exam).destroy? %>
+    <%= link_to 'Destroy', exam, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
     <% end %>
   </div>
   <% end %>
+</div>
+<% end %>
 </div>
 
