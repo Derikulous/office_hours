@@ -32,24 +32,24 @@ send us a pull request.
 5. Create new Pull Request
 
 ## Brakeman Report
-Rails version: 4.0.0
-Brakeman version: 2.2.0
-Started at 2013-12-09 17:11:40 -0800
-Duration: 2.31839 seconds
+Rails version: 4.0.0<br>
+Brakeman version: 2.2.0<br>
+Started at 2013-12-09 17:11:40 -0800<br>
+Duration: 2.31839 seconds<br>
 Checks run: BasicAuth, ContentTag, CrossSiteScripting, DefaultRoutes, Deserialize, DetailedExceptions, DigestDoS, EscapeFunction, Evaluation, Execute, FileAccess, FilterSkipping, ForgerySetting, JRubyXML, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, ModelAttrAccessible, ModelAttributes, ModelSerialize, NestedAttributes, QuoteTableName, Redirect, Render, ResponseSplitting, SQL, SafeBufferManipulation, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionSettings, SingleQuotes, SkipBeforeFilter, StripTags, SymbolDoS, TranslateBug, UnsafeReflection, ValidationRegex, WithoutProtection, YAMLParsing
 
 
 +SUMMARY+
 
-+-------------------+-------+
-| Scanned/Reported  | Total |
-+-------------------+-------+
-| Controllers       | 10    |
-| Models            | 5     |
-| Templates         | 60    |
-| Errors            | 0     |
-| Security Warnings | 0 (0) |
-+-------------------+-------+
++-------------------+-------+<br>
+| Scanned/Reported  | Total |<br>
++-------------------+-------+<br>
+| Controllers       | 10    |<br>
+| Models            | 5     |<br>
+| Templates         | 60    |<br>
+| Errors            | 0     |<br>
+| Security Warnings | 0 (0) |<br>
++-------------------+-------+<br>
 
 
 
