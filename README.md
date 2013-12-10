@@ -31,6 +31,27 @@ send us a pull request.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+## Brakeman Report
+Rails version: 4.0.0
+Brakeman version: 2.2.0
+Started at 2013-12-09 17:11:40 -0800
+Duration: 2.31839 seconds
+Checks run: BasicAuth, ContentTag, CrossSiteScripting, DefaultRoutes, Deserialize, DetailedExceptions, DigestDoS, EscapeFunction, Evaluation, Execute, FileAccess, FilterSkipping, ForgerySetting, JRubyXML, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, ModelAttrAccessible, ModelAttributes, ModelSerialize, NestedAttributes, QuoteTableName, Redirect, Render, ResponseSplitting, SQL, SafeBufferManipulation, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionSettings, SingleQuotes, SkipBeforeFilter, StripTags, SymbolDoS, TranslateBug, UnsafeReflection, ValidationRegex, WithoutProtection, YAMLParsing
+
+
++SUMMARY+
+
++-------------------+-------+
+| Scanned/Reported  | Total |
++-------------------+-------+
+| Controllers       | 10    |
+| Models            | 5     |
+| Templates         | 60    |
+| Errors            | 0     |
+| Security Warnings | 0 (0) |
++-------------------+-------+
+
+
 
 ## License
 

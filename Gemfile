@@ -19,8 +19,9 @@ gem 'pry-rails'
 gem 'font-awesome-rails'
 gem 'formtastic'
 gem 'pundit'
+gem 'brakeman', :require => false
 
-group :developemnt, :test do
+group :development, :test do
   gem 'simplecov', require: false
   gem 'launchy'
   gem 'turn'
